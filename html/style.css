@@ -1,110 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 *{
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body{
-    font-family: 'Luckiest Guy', cursive;
-    background-color: #e6e6ea;
+  font-family: 'Luckiest Guy', cursive;
+  background-color: #E6E6EA;
+}
+
+header{
+  background: rgb(187, 9, 68);
 }
 
 .container{
-    padding: 20px;
-    overflow: hidden;
-    background-color: #f14646;
+  width: 95%;
+  margin: auto;
 }
 
-.container h1{
-    float: left;
-    margin-left: 10%;
-    color: white;
+.nav{
+  overflow: hidden;
+  background: rgb(187, 9, 68);
+  color: #fff;
+  padding: 20px 0;
 }
 
-.container ul{
-    margin-left: 60%;
-    list-style-type: none;
-    font-size: 20px;
+.nav h2{
+  font-size: 2rem;
+  float: left;
 }
 
-.container li{
-    float: left;
-    padding: 0 20px 0 20px;
-    margin-top: 10px;
+nav{
+  float: right;
 }
 
-.container a{
-    color: white;
-    text-decoration: none;
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  font-size: 1.3rem;
+  margin-top: 5px;
+  float: left;
+  padding: 0 15px;
+}
+
+nav a{
+  text-decoration: none;
+  color: #fff;
 }
 
 .current a::after{
-    content: '_';
-    background-color: white;
-    font-size: 4px;
-    display: block;
+  content: '-';
+  font-size: 4px;
+  background-color: white;
+  display: block;
 }
 
 .wrapper{
-    display: grid;
-    grid-template-columns: 82% 18%;
+  display: grid;
+  grid-template-columns: 82% 18%;
 }
 
 .equation{
-    font-size: 65px;
-    background-color: white;
-    border-radius: 3px;
-    text-align: center;
-    padding-top: 15%;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
+  font-size: 5.2vw;
+  background: #fff;
+  border-radius: 3px;
+  text-align: center;
+  margin: 10px 10px 0px 10px;
 }
 
 .equation h1{
-    display: inline;
-    padding: 20px;
+  display: inline;
+  padding: 20px;
 }
 
-.answeroptions{
-    font-size: 65px;
-    margin-right: 10px;
+.answer-options{
+  font-size: 4.5vw;
+  margin-right: 10px;
 }
 
-.answeroptions h1{
-    cursor: pointer;
-    border-radius: 3px;
-    color: whitesmoke;
-    margin-top: 10px;
+.options{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 10px;
+  color: #fff;
+  transition: 2s;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.9);
+}
+
+@media(max-width:768px){
+  .nav h2{
+    font-size: 1.5rem;
+    float: none;
     text-align: center;
-    width: 100%;
+  }
+
+  nav{
+    float: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  nav li{
+    font-size: 1rem;
+  }
 }
 
-#option1{
-    background-color: #f14646;
-    transition: 1s;
+@media(max-width:480px){
+  .nav h2{
+    float: none;
+    text-align: center;
+  }
+
+  .equation h1{
+    display: inline;
+    padding: 10px;
+  } 
+
+  nav li{
+    font-size: .8rem;
+  }
+
 }
 
-#option1:hover{
-    color: #f14646;
-    background-color: whitesmoke;
-}
 
-#option2{
-    background-color: #4169e1;
-    transition: 1s;
-}
 
-#option2:hover{
-    color: #4169e1;
-    background-color: whitesmoke;
-}
 
-#option3{
-    background-color: #008080;
-    transition: 1s;
-}
-
-#option3:hover{
-    color: #008080;
-    background-color: whitesmoke;
-}
