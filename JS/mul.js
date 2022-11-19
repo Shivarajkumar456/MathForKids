@@ -1,14 +1,16 @@
 const option1 = document.getElementById("option1");
 const option2 = document.getElementById("option2");
 const option3 = document.getElementById("option3");
+const option4 = document.getElementById("option4");
 const audio = document.getElementById("myAudio");
 var answer = 0;
 
 function generate_equation(){
     var num1 = Math.floor(Math.random() * 13);
     var num2 = Math.floor(Math.random() * 13);
-    var dummyanswer1 = Math.floor(Math.random() * 13);
-    var dummyanswer2 = Math.floor(Math.random() * 13);
+    var dummyanswer1 = Math.floor(Math.random() * 12);
+    var dummyanswer2 = Math.floor(Math.random() * 14);
+    var dummyanswer3 = Math.floor(Math.random() * 15);
     var allanswers = [];
     var switchanswers = [];
 
@@ -17,7 +19,7 @@ function generate_equation(){
     document.getElementById("num1").innerHTML = num1;
     document.getElementById("num2").innerHTML = num2;
 
-    allanswers = [answer,dummyanswer1,dummyanswer2];
+    allanswers = [answer,dummyanswer1,dummyanswer2,dummyanswer3];
 
     for(i = allanswers.length;i--;){
         switchanswers.push(allanswers.splice(Math.floor(Math.random() * (i+1)),1)[0]);
@@ -26,6 +28,7 @@ function generate_equation(){
     option1.innerHTML = switchanswers[0];
     option2.innerHTML = switchanswers[1];
     option3.innerHTML = switchanswers[2];
+    option4.innerHTML = switchanswers[3];
 }
 
 option1.addEventListener('click', function(){
@@ -48,6 +51,15 @@ option2.addEventListener('click', function(){
 
 option3.addEventListener('click', function(){
     if(option3.innerHTML == answer){
+        generate_equation();
+    }
+    else{
+        audio.play();
+    }
+});
+
+option4.addEventListener('click', function(){
+    if(option4.innerHTML == answer){
         generate_equation();
     }
     else{

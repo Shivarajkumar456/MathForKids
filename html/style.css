@@ -60,7 +60,8 @@ nav a{
 
 .wrapper{
   display: grid;
-  grid-template-columns: 82% 18%;
+  height: 82vh;
+  grid-template-columns: 80% 20%;
 }
 
 .equation{
@@ -81,7 +82,7 @@ nav a{
 }
 
 .answer-options{
-  font-size: 4.5vw;
+  font-size: 3rem;
   margin-right: 10px;
 }
 
